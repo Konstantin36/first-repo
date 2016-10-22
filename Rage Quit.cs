@@ -23,14 +23,14 @@ class Program
         foreach (Match match in collection)
         {
  //Console.WriteLine(match);показва отделните лементи на стринга input с главни букви
-            elements.Append(match.Groups[1]);
+           
             for (int i = 0; i < int.Parse(match.Groups[2].ToString()); i++)
             {
-                output.Append(match.Groups[2]);
-//взема символите без цифрите
+                output.Append(match.Groups[1]);
+//взема символите без цифрите Group1
             }
         }
-        count = elements.ToString().Distinct().Count();
+        count = output.ToString().Distinct().Count();
         Console.WriteLine("Unique symbols used: {0}",count);
         Console.WriteLine("{0}",output);
     }    
